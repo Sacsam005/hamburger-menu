@@ -1,13 +1,12 @@
 const hamburger = document.querySelector('.hamburger');
-const navbar = document.querySelector('.nav-menu');
+const navMenu = document.querySelector('.nav-menu');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
-    navbar.classList.toggle('active');
+    navMenu.classList.toggle('active');
 })
 
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => {
     hamburger.classList.remove('active');
-    navbar.classList.remove('active');
+    navMenu.classList.remove('active');
 }))
-
