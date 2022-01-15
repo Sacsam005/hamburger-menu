@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200&family=Fondamento&family=Yuji+Boku&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200&family=Fondamento&family=Yuji+Boku&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -22,24 +21,21 @@ nav {
   height: 75px;
   width: 100%;
   background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 1rem;
   margin: 0;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: linear-gradient(-8deg, transparent 20px, #000 0);
-  /* clip-path: polygon(
-    0% 0%,
-    /* top left */ 0% 0%,
-    /* top left */ 95% 0%,
-    /* top right */ 100% 0%,
-    /* top right */ 100% 90%,
-    /* bottom right */ 95% 100%,
-    /* bottom right */ 5% 100%,
-    /* bottom left */ 0 90% /* bottom left */
-  ); */
 }
 
 ul {
@@ -48,7 +44,10 @@ ul {
 
 .navbar {
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -57,17 +56,23 @@ ul {
 }
 
 .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   text-align: center;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 a.nav-link {
   color: white;
   text-decoration: none;
   font-size: 1.3rem;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -95,6 +100,7 @@ a.nav-link::after {
   color: white;
   padding: 0;
   margin: 6px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: white;
 }
@@ -103,37 +109,41 @@ a.nav-link::after {
   .hamburger {
     display: block;
   }
-
-  .hamburger.active .bar:nth-child(2) {
+  .active .bar:nth-child(2) {
     opacity: 0;
   }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(-315deg);
+  .active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(-315deg);
+            transform: translateY(8px) rotate(-315deg);
   }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
+  .active .bar:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+            transform: translateY(-10px) rotate(-45deg);
   }
-
   .nav-menu {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     position: fixed;
     top: 75px;
     left: -100%;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     background: #fff;
     margin: 0 auto;
   }
-
-  .nav-menu.active {
+  .active {
     left: 0;
     z-index: 100;
   }
-
   a.nav-link {
     margin: 1rem 0;
     color: black;
@@ -141,3 +151,4 @@ a.nav-link::after {
     font-weight: lighter;
   }
 }
+/*# sourceMappingURL=style.css.map */
